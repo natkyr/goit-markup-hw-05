@@ -30,6 +30,15 @@ body {
   font-style: normal;
   color: var(--main-text-color);
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .hidden-heading {
   display: none;
 }
@@ -47,9 +56,7 @@ body {
 .list {
   list-style: none;
 }
-.link {
-  text-decoration: none;
-}
+
 .section-title {
   font-weight: bold;
   font-size: 36px;
@@ -138,20 +145,8 @@ body {
   margin-left: 290px;
   align-items: center;
 }
-
 .media-list .link {
   color: var(--text-color);
-}
-.header .link {
-  padding: 32px 0px;
-  display: block;
-}
-.header .link:hover,
-.header .link:focus {
-  color: var(--accent-color);
-}
-
-.media-list-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,6 +159,13 @@ body {
   margin-right: 10px;
 }
 .media-list-item:hover .link {
+  color: var(--accent-color);
+}
+.header .link {
+  padding: 32px 0px;
+}
+.header .link:hover,
+.header .link:focus {
   color: var(--accent-color);
 }
 
@@ -313,19 +315,25 @@ body {
   border-radius: 4px;
   width: 170px;
   height: 92px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .customers-list > li:not(:last-child) {
   margin-right: 30px;
 }
-.customers-list > li:hover,
-.customers-list > li:focus {
+.customers-list-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customers-list-link:hover,
+.customers-list-link:focus {
+  /* width: 100%; */
   color: var(--accent-color);
   cursor: pointer;
   border: 1px solid var(--accent-color);
 }
+
 /* Buttons filters */
 .filter-list {
   display: flex;
@@ -376,8 +384,12 @@ body {
   width: 370px;
   cursor: pointer;
 }
-.projects-list li:hover,
-.projects-list li:focus {
+
+.projects-list-item {
+  display: block;
+}
+.projects-list-item:focus,
+.projects-list-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -427,7 +439,7 @@ body {
 }
 .footer-contacts {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .footer-social {
   margin-left: 70px;
