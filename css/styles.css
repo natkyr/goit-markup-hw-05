@@ -53,6 +53,17 @@ img {
 .header .nav-list .active {
   color: var(--accent-color);
 }
+.header .nav-list .active::after {
+  content: "";
+  height: 4px;
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
 .list {
   list-style: none;
 }
@@ -138,6 +149,9 @@ img {
 }
 .nav-list .link {
   color: var(--main-text-color);
+}
+.underline {
+  position: relative;
 }
 .media-list {
   display: flex;
@@ -253,8 +267,27 @@ img {
 .what-we-do-section {
   padding-top: 0px;
 }
+.what-we-do-section .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  height: 70px;
+  padding: 27px;
+  color: var(--white-color);
+  background: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .work-list {
   display: flex;
+}
+.work-list li {
+  position: relative;
 }
 .work-list li:not(:last-child) {
   margin-right: 30px;
