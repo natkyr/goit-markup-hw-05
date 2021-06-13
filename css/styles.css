@@ -148,6 +148,7 @@ img {
   width: 294px;
 }
 .nav-list .link {
+  display: block;
   color: var(--main-text-color);
 }
 .underline {
