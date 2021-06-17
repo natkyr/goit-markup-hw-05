@@ -39,16 +39,26 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Анімація */
 .link,
 .icons-list a,
-.icons-list-footer a,
 .customers-list-link,
+.filter {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-list a,
+.icons-list-footer a,
+.filter {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .filter,
 .projects-list-item {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .hidden-heading {
   display: none;
 }
@@ -59,6 +69,10 @@ img {
 }
 .section {
   padding: 94px 0;
+}
+.nav {
+  display: flex;
+  align-items: center;
 }
 .header .nav-list .active {
   color: var(--accent-color);
@@ -84,6 +98,9 @@ img {
   line-height: 1.171;
   letter-spacing: 0.03em;
 }
+.header-icon {
+  fill: currentColor;
+}
 .icon {
   width: 20px;
   height: 20px;
@@ -93,7 +110,6 @@ img {
 .icons-list-footer {
   width: 206px;
   margin: 0 auto;
-  margin-top: 16px;
   display: flex;
   justify-content: space-between;
 }
@@ -135,6 +151,8 @@ img {
   font-weight: bold;
   line-height: 1.173;
   letter-spacing: 0.03em;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .logo-span {
   color: var(--accent-color);
@@ -142,6 +160,8 @@ img {
 .header .container {
   display: flex;
   align-items: center;
+  width: 1170px;
+  padding: 0;
 }
 .header .list {
   font-weight: 500;
@@ -168,7 +188,6 @@ img {
   display: flex;
   justify-content: space-between;
   margin-left: 290px;
-  align-items: center;
 }
 .media-list .link {
   color: var(--text-color);
@@ -180,7 +199,7 @@ img {
   margin-right: 30px;
 }
 
-.media-list-item .icon {
+.media-list-item .header-icon {
   margin-right: 10px;
 }
 .media-list-item:hover .link {
@@ -279,20 +298,21 @@ img {
   padding-top: 0px;
 }
 .what-we-do-section .title {
-  text-align: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.172;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   height: 70px;
-  padding: 27px;
   color: var(--white-color);
   background: rgba(47, 48, 58, 0.8);
   width: 370px;
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .work-list {
   display: flex;
@@ -313,8 +333,8 @@ img {
   background: var(--background-light-color);
 }
 .member-info {
-  margin-top: 30px;
-  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
 }
 .member-name {
   font-weight: 500;
@@ -482,7 +502,8 @@ img {
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-list-item:hover .description-text {
+.projects-list-item:hover .description-text,
+.projects-list-item:focus .description-text {
   transform: translateY(0%);
   opacity: 1;
 }
@@ -521,6 +542,7 @@ img {
   margin-left: 70px;
 }
 .footer-title {
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.172;
